@@ -42,10 +42,51 @@
     }
 }
 
-\newcommand{\chapterdesign}{
-\begin{center}
-{\fontsize{52}{52}\selectfont\color{azulOscuro}\bfseries\thechapter}
+\newcommand{\chapterstyle}{%
+\begingroup
+    \thispagestyle{empty}%
+    \vspace*{2.5cm}%
+    \raggedleft%
+    {\fontsize{70}{70}\selectfont\bfseries\color{azulOscuro}\thechapter\par}%
+    \vspace{0.7cm}%
+\endgroup
+}
 
-\vspace{0.8cm}
-\end{center}
+\newcommand{\chaptersectionsglossary}{%
+    \par\vspace{1cm}%
+    \begingroup
+        \etocsetnexttocdepth{section}%
+        \etocsettocstyle{%
+            \begin{tcolorbox}[
+                enhanced,
+                colback=white,
+                colframe=grisClaro!65,
+                boxrule=0.45pt,
+                arc=4pt,
+                left=12pt,
+                right=12pt,
+                top=10pt,
+                bottom=10pt,
+                width=0.74\textwidth,
+                enlarge left by=0.26\textwidth,
+                drop fuzzy shadow=black!18
+            ]%
+            {\footnotesize\bfseries\textcolor{azulOscuro}{Contenido del capítulo}\par}%
+            \vspace{0.45em}%
+            \scriptsize
+        }{%
+            \end{tcolorbox}%
+        }%
+        \etocsetstyle{section}
+            {}
+            {}
+            {%
+                \noindent
+                \textcolor{azulPrincipal}{\bfseries\etocnumber}%
+                \hspace{0.6em}\etocname
+                \textcolor{grisClaro}{\dotfill}\etocpage\par
+            }
+            {}%
+        \localtableofcontents
+    \endgroup
 }
