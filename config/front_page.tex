@@ -1,0 +1,108 @@
+\begin{titlepage}
+\thispagestyle{empty}
+
+% ── Decoración geométrica (TikZ) ─────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+
+  % Barra oscura superior-izquierda
+  \fill[azulOscuro]
+    (current page.north west)
+    rectangle
+    ([xshift=1.5cm, yshift=-5.0cm] current page.north west);
+
+  % Línea vertical de acento (continúa bajo la barra)
+  \draw[azulPrincipal, line width=0.8pt]
+    ([xshift=1.5cm, yshift=-6.5cm] current page.north west)
+    --
+    ([xshift=1.5cm, yshift= 3.5cm] current page.south west);
+
+
+ % Triángulo decorativo gris (capa encima)
+  \fill[yellow]
+    (current page.south east)
+    -- ([xshift= -3.0cm]            current page.south east)
+    -- ([yshift= 3.0cm]             current page.south east)
+    -- cycle;
+
+  % Triángulo principal inferior-derecho
+  \fill[azulOscuro]
+    (current page.south east)
+    -- ([xshift= -2.0cm]             current page.south east)
+    -- ([yshift= 2.0cm]              current page.south east)
+    -- cycle;
+
+\end{tikzpicture}
+
+% ── Logo ─────────────────────────────────────────────────────
+\vspace*{0.3cm}
+\begin{flushleft}
+  \includegraphics[height=3.0cm]{images/logo_azul.png}\\[0.35cm]
+\end{flushleft}
+
+% ── Etiqueta superior ────────────────────────────────────────
+\vspace{1cm}
+{\large\color{grisTexto}\MakeUppercase{Informe Final de}}
+
+% ── Título principal ─────────────────────────────────────────
+\vspace{0.25cm}
+{\fontsize{40}{44}\selectfont\bfseries\color{azulPrincipal}
+  PRÁCTICA\\[0.3cm]
+  PROFESIONAL
+}
+
+% ── Línea decorativa bajo el título ─────────────────────────
+\vspace{0.45cm}
+{\color{yellow}\rule{3.2cm}{2pt}}
+
+\vspace{0.9cm}
+
+% ── Tabla de datos del autor ─────────────────────────────────
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.55}
+\begin{tabular}{@{} l @{\hspace{6pt}} l @{}}
+
+  \textcolor{azulPrincipal}{\faUser}        &
+  \begin{tabular}[t]{@{}l@{}}
+    {\scriptsize\bfseries\color{azulPrincipal}\MakeUppercase{Autor}}\\
+    \studentName
+  \end{tabular}\\
+
+  \textcolor{azulPrincipal}{\faGraduationCap} &
+  \begin{tabular}[t]{@{}l@{}}
+    {\scriptsize\bfseries\color{azulPrincipal}\MakeUppercase{Carrera}}\\
+    \career
+  \end{tabular}\\
+
+  \textcolor{azulPrincipal}{\faBuilding}    &
+  \begin{tabular}[t]{@{}l@{}}
+    {\scriptsize\bfseries\color{azulPrincipal}\MakeUppercase{Empresa}}\\
+    \company
+  \end{tabular}\\
+
+  \textcolor{azulPrincipal}{\faUserTie}        &
+  \begin{tabular}[t]{@{}l@{}}
+    {\scriptsize\bfseries\color{azulPrincipal}\MakeUppercase{Supervisor de Práctica}}\\
+    \supervisor
+  \end{tabular}\\
+
+\end{tabular}
+
+\vfill
+
+% ── Separador y pie de página ────────────────────────────────
+\noindent{\color{yellow}\rule{\linewidth}{0.5pt}}
+
+\vspace{0.35cm}
+\noindent
+\begin{minipage}[c]{0.5\linewidth}
+  \small\color{grisTexto}
+  \enspace\reportCity
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.45\linewidth}
+  \raggedleft
+  \small\color{grisTexto}
+  \reportDate
+\end{minipage}
+
+\end{titlepage}

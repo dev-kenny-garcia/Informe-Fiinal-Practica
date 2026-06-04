@@ -1,0 +1,51 @@
+% Titulo del Informe
+\newcommand{\titleInforme}{Informe de Práctica Profesional}
+
+% Nombre de la empresa
+\newcommand{\company}{Aeropuerto Internacional de Palmerola}
+
+% Nombre de la Universidad
+\newcommand{\college}{Universidad Nacional Autónoma de Honduras}
+\newcommand{\collegeCorto}{UNAH}
+
+% Datos del Autor
+\newcommand{\studentName}{Kenny David García Martínez}
+\newcommand{\account}{20191930116}
+\newcommand{\career}{Ingeniería en Sistemas}
+\newcommand{\supervisor} {Edis Francisco Romero}
+\newcommand{\reportCity} {Comayagua, Honduras}
+
+
+% Comando para insertar imágenes
+\newcommand{\imagen}[3]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#2\textwidth]{#1}
+        \caption{#3}
+    \end{figure}
+}
+
+% Comando para resaltar información importante
+\newcommand{\importante}[1]{
+    \textbf{#1}
+}
+
+% Fecha del informe
+\newcommand{\reportDate}{00 de Junio de 2026}
+
+\newcommand\BackgroundTemplate{
+    \AddToShipoutPictureBG{
+        \includegraphics[
+            width=\paperwidth,
+            height=\paperheight
+        ]{images/Pie-page-A.pdf}
+    }
+}
+
+\newcommand{\chapterdesign}{
+\begin{center}
+{\fontsize{52}{52}\selectfont\color{azulOscuro}\bfseries\thechapter}
+
+\vspace{0.8cm}
+\end{center}
+}
