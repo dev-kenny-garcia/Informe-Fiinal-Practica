@@ -42,10 +42,12 @@
     }
 }
 
-\newcommand{\chapterdesign}{
-\begin{center}
-{\fontsize{52}{52}\selectfont\color{azulOscuro}\bfseries\thechapter}
-
-\vspace{0.8cm}
-\end{center}
+\newcommand{\chapterstyle}{%
+\begingroup
+    \thispagestyle{empty}%
+    \vspace*{2.5cm}%
+    \raggedleft%
+    {\fontsize{70}{70}\selectfont\bfseries\color{azulOscuro}\thechapter\par}%
+    \vspace{0.7cm}%
+\endgroup
 }

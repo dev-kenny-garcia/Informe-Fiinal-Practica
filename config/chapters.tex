@@ -1,5 +1,45 @@
+\newcommand{\chaptersectionsglossary}{%
+    \par\vspace{1cm}%
+    \begingroup
+        \etocsetnexttocdepth{section}%
+        \etocsettocstyle{%
+            \begin{tcolorbox}[
+                enhanced,
+                colback=white,
+                colframe=grisClaro!65,
+                boxrule=0.45pt,
+                arc=4pt,
+                left=12pt,
+                right=12pt,
+                top=10pt,
+                bottom=10pt,
+                width=0.74\textwidth,
+                enlarge left by=0.26\textwidth,
+                drop fuzzy shadow=black!18
+            ]%
+            {\footnotesize\bfseries\textcolor{azulOscuro}{Contenido del capítulo}\par}%
+            \vspace{0.45em}%
+            \scriptsize
+        }{%
+            \end{tcolorbox}%
+        }%
+        \etocsetstyle{section}
+            {}
+            {}
+            {%
+                \noindent
+                \textcolor{azulPrincipal}{\bfseries\etocnumber}%
+                \hspace{0.6em}\etocname
+                \textcolor{grisClaro}{\dotfill}\etocpage\par
+            }
+            {}%
+        \localtableofcontents
+    \endgroup
+}
+
 \titleformat{\chapter}[display]
-  {\normalfont\Huge\bfseries}
-  {\thechapter}
-  {20pt}
-  {}
+{\normalfont\huge\bfseries}
+{}
+{0pt}
+{\chapterstyle}
+[\chaptersectionsglossary\clearpage]
