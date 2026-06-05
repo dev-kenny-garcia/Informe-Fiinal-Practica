@@ -1,34 +1,21 @@
 \pagestyle{fancy}
-
 \fancyhf{}
-
-% ================= HEADER =================
-
-\fancyhead[L]{
-    \small\sffamily\nouppercase{\leftmark}
+\fancyhead[LO]{
+    \small\sffamily\nouppercase{\rightmark}
 }
-
-% ================= FOOTER =================
-
-\fancyfoot[L]{
-    \small\sffamily \collegeCorto
-}
-
-\fancyfoot[C]{
-    \small\sffamily \titleInforme
-}
-
-\fancyfoot[R]{
+\fancyhead[RO]{
     \small\sffamily\thepage
 }
-
+\fancyhead[LE]{
+    \small\sffamily\thepage
+}
+\fancyhead[RE]{
+    \small\sffamily\nouppercase{\leftmark}
+}
 % ================= LINES =================
-
 \renewcommand{\headrulewidth}{0.1pt}
 \renewcommand{\footrulewidth}{0pt}
-
 % ================= FIX CHAPTER STYLE =================
-
 \patchcmd{\chapter}
   {\thispagestyle{plain}}
   {\thispagestyle{fancy}}
