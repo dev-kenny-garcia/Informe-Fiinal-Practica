@@ -4,7 +4,7 @@
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{booktabs}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{eso-pic}
 \usepackage{geometry}
 \usepackage{tikz}
@@ -15,17 +15,27 @@
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{tcolorbox}
+\tcbuselibrary{skins}
 \usepackage{etoc}
 
 \setlength{\headheight}{16pt}
 \setmainfont[
     Path = config/fonts/,
     Extension = .ttf,
-    UprightFont = Lato-Regular,
-    BoldFont = Lato-Bold,
-    ItalicFont = Lato-Italic,
-    BoldItalicFont = Lato-BoldItalic
-]{Lato}
+    UprightFont = Spectral-Regular,
+    BoldFont = Spectral-Bold,
+    ItalicFont = Spectral-Italic,
+    BoldItalicFont = Spectral-BoldItalic
+]{Spectral}
+
+\setsansfont[
+    Path = config/fonts/,
+    Extension = .ttf,
+    UprightFont = Spectral-Regular,
+    BoldFont = Spectral-Bold,
+    ItalicFont = Spectral-Italic,
+    BoldItalicFont = Spectral-BoldItalic
+]{Spectral}
 
  \geometry{
      left=3cm,

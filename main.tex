@@ -1,21 +1,41 @@
-\documentclass[12pt, letterpaper]{report}
+% -------------------------------------------------------------
+% Plantilla Informe Final de Práctica Profesional Supervisada
+% Autor: Kenny David García Martínez
+% Contacto: kenny.garcia@unah.hn, contactgarcia21@gmail.com
+% Versión: 1.0 - 2024-06-06
+% -------------------------------------------------------------
+\documentclass[12pt, letterpaper, twoside]{report}
 
 \input{config/packages}
 \input{config/commands}
 \input{config/colors}
-\input{config/chapters}
+
 
 \begin{document}
 
 \input{config/front_page}
 
 \BackgroundTemplate
+
+\begingroup
+\pagestyle{empty}
+\makeatletter
+\let\ps@plain\ps@empty
+\makeatother
+\input{chapters/Abstract}
+\clearpage
 \tableofcontents
 \clearpage
+\endgroup
 
 \input{config/header_footer}
+\input{config/chapters}
 % Chapters
 
 \input{chapters/01_Generalities}
+\input{chapters/02_Planning_Management}
+\input{chapters/03_Development}
+\input{chapters/04_Results}
+\input{chapters/05_Conclusions}
 
 \end{document}
