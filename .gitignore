@@ -4,4 +4,12 @@
 *.out*
 *.log*
 *.toc*
-*.pdf
+main.pdf*
+*.acn*
+*.acr*
+*.alg*
+*.glg*
+*.glo*
+*.gls*
+*.glsdefs*
+*.ist*
