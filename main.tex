@@ -11,15 +11,20 @@
 \input{config/colors}
 \input{config/acronyms}
 
+\raggedbotton
 
 \begin{document}
 
 \input{config/front_page}
 
-\BackgroundTemplate%
-
+\pagenumbering{gobble}
+%------------Aqui se incluye la Carta de Aceptacion del estudiante------------%
+% \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{images/<nombre_archivo_carta>.pdf}
+%-----------------------------------------------------------------------------%
+\clearpage
 \pagenumbering{roman}
 \pagestyle{plain}
+\BackgroundTemplate%
 \input{chapters/Abstract}
 
 \tableofcontents
