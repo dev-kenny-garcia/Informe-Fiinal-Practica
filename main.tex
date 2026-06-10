@@ -2,7 +2,7 @@
 % Plantilla Informe Final de Práctica Profesional Supervisada
 % Autor: Kenny David García Martínez
 % Contacto: kenny.garcia@unah.hn, contactgarcia21@gmail.com
-% Versión: 1.0 - 2024-06-06
+% Versión: 1.1.1 - 2024-06-09
 % -------------------------------------------------------------
 \documentclass[12pt, letterpaper, twoside]{report}
 
@@ -11,15 +11,20 @@
 \input{config/colors}
 \input{config/acronyms}
 
+% \raggedbotton % Puede que en un futuro sea necesario descomentarlo
 
 \begin{document}
 
 \input{config/front_page}
 
-\BackgroundTemplate%
-
+\pagenumbering{gobble}
+%------------Aqui se incluye la Carta de Aceptacion del estudiante------------%
+% \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{images/<nombre_archivo_carta>.pdf}
+%-----------------------------------------------------------------------------%
+\clearpage
 \pagenumbering{roman}
 \pagestyle{plain}
+\BackgroundTemplate%
 \input{chapters/Abstract}
 
 \tableofcontents
